@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #8d6e63;
+  --color-secondary: #f4a261;
+
+  --color-border: #e8dcd3;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+
+  --color-heading-text: #3e2c23;
+  --color-body-text: #6d5a50;
+
+  --color-bg: #fff8f1;
+  --color-surface: #ffffff;
+
+  --font-family: "Roboto", Helvetica, Arial;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  width: 100svw;
+  background: var(--color-bg);
+  font-family: var(--font-family);
+  position: relative;
+}
+
+h1 {
+  color: var(--color-heading-text);
+}
+
+nav {
+  display: flex;
+
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  box-shadow: 1px 1px 10px var(--color-shadow);
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+
+  color: var(--text);
+}
+
+.options ul {
+  display: flex;
+
+  gap: 3.5rem;
+  list-style: none;
+}
+
+ul li {
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  font-weight: 500;
+}
+
+.light,
+.dark {
+  padding: 10px 14px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+button {
+  transition: 200ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+  font-weight: 500;
+}
+
+main {
+  background-color: var(--color-surface);
+  margin: 2rem;
+  padding: 1rem;
+}
+.field {
+  background: var(--color-surface);
+}
+
+/*Main field*/
+main {
+  border-radius: 3rem;
+  padding: 1rem;
+}
+
+.headers {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.item-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr 0.5fr;
+  padding: 10px;
+  transition: 200ms ease-in-out;
+}
+.item-row:hover {
+  background-color: #cccccc;
+}
+
+.options-btn {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  outline: none;
+
+  border: none;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  background-color: #f0f0f0;
+  padding: 10px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50, -50);
+
+  visibility: hidden;
+}

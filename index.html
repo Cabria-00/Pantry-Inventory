@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pantry Inventory</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="./script.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="sidebar">
+      <h1>Pantry Management</h1>
+      <div class="options">
+        <ul>
+          <li class="option">All items</li>
+          <li class="option">Soon to expire</li>
+          <li class="option">Expired items</li>
+        </ul>
+      </div>
+      <div>
+        <button class="light">Light</button>
+        <button class="dark">Dark</button>
+      </div>
+    </nav>
+
+    <main>
+      <div class="headers">
+        <span>Item name</span>
+        <span>Category</span>
+        <span>Quantity</span>
+        <span>Expiry date</span>
+        <span>Update</span>
+      </div>
+      <hr />
+      <div class="item-containers">
+        <div class="item-row">
+          <span>Item 1</span>
+          <span>category</span>
+          <span>10</span>
+          <span>Date</span>
+          <button><i class="fa fa-edit"></i></button>
+          <button><i class="fa fa-trash"></i></button>
+        </div>
+        <div class="item-row">
+          <span>Item 3</span>
+          <span>category</span>
+          <span>10</span>
+          <span>Date</span>
+          <button><i class="fa fa-edit"></i></button>
+          <button><i class="fa fa-trash"></i></button>
+        </div>
+        <div class="item-row">
+          <span>Item 2</span>
+          <span>category</span>
+          <span>10</span>
+          <span>Date</span>
+          <button><i class="fa fa-edit"></i></button>
+          <button><i class="fa fa-trash"></i></button>
+        </div>
+      </div>
+    </main>
+
+    <button class="options-btn"><i class="fa fa-plus"></i></button>
+
+    <form action="#">
+      <label for="itemName">Item name</label>
+      <input type="text" name="itemName" id="itemName" required />
+
+      <label for="itemCategory">Item Category</label>
+      <input type="text" name="itemCategory" id="itemCategory" required />
+
+      <label for="itemQuantity">Item Quantity</label>
+      <input type="text" name="itemQuantity" id="itemQuantity" required />
+
+      <label for="itemExpireDate">Item expire date</label>
+      <input type="text" name="itemExpireDate" id="itemExpireDate" required />
+    </form>
+  </body>
+</html>
