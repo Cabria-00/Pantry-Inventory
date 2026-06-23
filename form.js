@@ -1,7 +1,5 @@
 import { form } from "./elements.js";
 
-const formClass = new FormData(form);
-
 function showForm() {
   let isFormOpen = form.style.visibility === "visible";
 
@@ -10,4 +8,8 @@ function showForm() {
     : (form.style.visibility = "visible");
 }
 
-export { showForm };
+function resetForm() {
+  form.reset();
+}
+
+export { showForm, resetForm };
