@@ -72,19 +72,24 @@
 
     <form>
       <label for="itemName">Item name</label>
-      <input type="text" name="itemName" id="itemName" required />
+      <input required type="text" name="itemName" id="itemName" />
 
       <label for="itemCategory">Item Category</label>
-      <input type="text" name="itemCategory" id="itemCategory" required />
+
+      <select name="itemCategory" id="itemCategory">
+        <option value="Cereal">Cereal</option>
+        <option value="Dairy">Dairy</option>
+        <option value="Condiments">Condiment</option>
+      </select>
 
       <label for="itemQuantity">Item Quantity</label>
-      <input type="text" name="itemQuantity" id="itemQuantity" required />
+      <input required type="" name="itemQuantity" id="itemQuantity" />
 
       <label for="itemExpireDate">Item expire date</label>
-      <input type="text" name="itemExpireDate" id="itemExpireDate" required />
+      <input required type="date" name="itemExpireDate" id="itemExpireDate" />
 
       <div class="btn-container">
-        <button class="submit-Btn">Submit</button>
+        <button type="submit" class="submit-Btn">Submit</button>
         <button class="close-Btn">Close</button>
       </div>
     </form>

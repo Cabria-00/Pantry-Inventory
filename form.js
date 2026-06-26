@@ -1,6 +1,6 @@
 import { form } from "./elements.js";
 
-function showForm() {
+function toggleForm() {
   let isFormOpen = form.style.visibility === "visible";
 
   isFormOpen
@@ -12,4 +12,4 @@ function resetForm() {
   form.reset();
 }
 
-export { showForm, resetForm };
+export { toggleForm, resetForm };

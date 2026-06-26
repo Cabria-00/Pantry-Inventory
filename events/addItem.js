@@ -1,7 +1,7 @@
 import { form, submitBtn, closeFormBtn } from "../elements.js";
 import Item from "../Pantry-Items.js";
 import pantryItems from "../state/state.js";
-import { showForm, resetForm } from "../form.js";
+import { toggleForm, resetForm } from "../form.js";
 
 export function getItems() {
   const data = Object.fromEntries(new FormData(form));
@@ -13,10 +13,12 @@ export function getItems() {
     data.itemExpireDate,
   );
 
-  console.log(newItem);
-
   pantryItems.push(newItem);
 
+  console.log(newItem);
+  console.log(newItem.calcShelfLife());
+  console.log(newItem.getItemStatus());
+
   resetForm();
-  showForm();
+  toggleForm();
 }
